@@ -4,7 +4,8 @@ data "tfe_outputs" "project_list" {
 }
 
 resource "null_resource" "project-id" {
-  id = data.tfe_outputs.project_list.*.id
+  for_each = data.tfe_outputs.project_list
+  id = value.id
 }
 
 output "project-ids" {
