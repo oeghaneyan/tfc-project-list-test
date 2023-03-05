@@ -10,7 +10,3 @@ resource "tfe_workspace" "TFC-Test-Workspace" {
   tag_names    = ["test", "app"]
   project_id   = data.tfe_outputs.project_list.values.id
 }
-
-output "project-ids" {
-  value = null_resource.project-id
-}
