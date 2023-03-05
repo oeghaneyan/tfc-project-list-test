@@ -11,5 +11,5 @@ resource "null_resource" "project-id" {
 }
 
 output "project-ids" {
-  value = null_resource.avengers
+  value = null_resource.project-id
 }
