@@ -5,7 +5,9 @@ data "tfe_outputs" "project_list" {
 
 resource "null_resource" "project-id" {
   for_each = data.tfe_outputs.project_list
-  id = value.id
+  triggers = {
+    name = each.value
+  }
 }
 
 output "project-ids" {
