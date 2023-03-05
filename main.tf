@@ -5,7 +5,7 @@ data "tfe_outputs" "project_list" {
 
 resource "null_resource" "project-id" {
   triggers = {
-    id = data.tfe_outputs.project_list.*
+    id = data.tfe_outputs.project_list
   }
 }
 
