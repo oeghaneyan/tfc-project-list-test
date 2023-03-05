@@ -4,9 +4,7 @@ data "tfe_outputs" "project_list" {
 }
 
 resource "null_resource" "project-id" {
-  triggers = {
-    id = data.tfe_outputs.project_list.*.id
-  }
+  id = data.tfe_outputs.project_list.*.id
 }
 
 output "project-ids" {
