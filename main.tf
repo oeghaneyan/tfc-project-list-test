@@ -4,9 +4,9 @@ data "tfe_outputs" "project_list" {
 }
 
 resource "null_resource" "project-id" {
-  for_each = toset(data.tfe_outputs.project_list)
+  for_each = toset(data.tfe_outputs.project_list.*.id)
   triggers = {
-    id = each.value.id
+    id = each.value
   }
 }
 
