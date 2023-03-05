@@ -3,10 +3,10 @@ data "tfe_outputs" "project_list" {
   workspace =  "tfc-project-mgmt"
 }
 
-
 resource "tfe_workspace" "TFC-Test-Workspace" {
   name         = "TFC-Test-Workspace"
   organization = "TF-Cloud-Demo-OE"
   tag_names    = ["test", "app"]
-  project_id   = data.tfe_outputs.project_list.values.id
+  project_id   = "${data.tfe_outputs.project_list.values."Project X".id}"
+  "${data.aws_ami.app_ami.id}"
 }
