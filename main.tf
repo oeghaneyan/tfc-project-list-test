@@ -4,7 +4,6 @@ data "tfe_outputs" "project_list" {
 }
 
 variable "project_list_var" {
-  type = map
   default = { data.tfe_outputs.project_list.values.project_list }
 }
 
