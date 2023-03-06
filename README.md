@@ -21,10 +21,6 @@ data.tfe_outputs.projects.nonsensitive_values.project_list["ProjectX"]
 |------|---------|
 | <a name="provider_tfe"></a> [tfe](#provider\_tfe) | n/a |
 
-### Modules
-
-No modules.
-
 ### Resources
 
 | Name | Type |
@@ -40,6 +36,3 @@ No modules.
 | <a name="input_org_name"></a> [org\_name](#input\_org\_name) | Name of TFC Organization. | `string` | n/a | yes |
 | <a name="input_token"></a> [token](#input\_token) | Token for TFC Organization. | `string` | n/a | yes |
 
-### Outputs
-
-No outputs.
