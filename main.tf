@@ -17,4 +17,5 @@ resource "tfe_workspace" "TFC-Test-Workspace" {
   
 #  data.tfe_outputs.project_list.values(project[ProjectX].id)
 #  lookup(data.tfe_outputs.projects.values.project_list, "ProjectX", [*])
+#
 }
