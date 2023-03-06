@@ -4,7 +4,7 @@ provider "tfe" {
 }
 
 data "tfe_outputs" "projects" {
-  organization = "TF-Cloud-Demo-OE"
+  organization = var.org_name
   workspace =  "tfc-project-mgmt"
 }
 
