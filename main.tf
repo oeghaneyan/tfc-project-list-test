@@ -5,7 +5,7 @@ data "tfe_outputs" "project_list" {
 
 variable "project_list_var" {
   type        = string
-  default = { data.tfe_outputs.project_list.values.project_list }
+  default = [{ data.tfe_outputs.project_list.values.project_list }]
 }
 
 resource "tfe_workspace" "TFC-Test-Workspace" {
