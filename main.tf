@@ -27,12 +27,8 @@ variable "org_name" {
 
 resource "tfe_workspace" "TFC-Test-Workspace" {
   name         = "TFC-Test-Workspace"
-  organization = "TF-Cloud-Demo-OE"
-  tag_names    = ["test", "app"]
-#  project_id   = data.tfe_outputs.projects.values.project_list #["ProjectX"]
+  organization = var.org_name
+  tag_names    = ["test"]
   project_id   = data.tfe_outputs.projects.nonsensitive_values.project_list["ProjectX"]
-#
-#  data.tfe_outputs.project_list.values(project[ProjectX].id)
-#  lookup(data.tfe_outputs.projects.values.project_list, "ProjectX", [*])
-#
+
 }
