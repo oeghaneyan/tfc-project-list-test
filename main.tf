@@ -13,5 +13,4 @@ resource "tfe_workspace" "TFC-Test-Workspace" {
   organization = var.org_name
   tag_names    = ["test"]
   project_id   = data.tfe_outputs.projects.nonsensitive_values.project_list["ProjectX"]
-
 }
